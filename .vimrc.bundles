@@ -1,0 +1,1 @@
+Plug 'scrooloose/nerdcommenter', { 'on':  'NERDTreeToggle' }                                             Plug 'scrooloose/nerdtree'
