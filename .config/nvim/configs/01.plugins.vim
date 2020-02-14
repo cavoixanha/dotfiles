@@ -25,14 +25,36 @@ NeoBundle 'scrooloose/nerdtree'
 " NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'preservim/nerdcommenter'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'tpope/vim-rails'
+" NeoBundle 'tpope/vim-rails'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'moll/vim-node'
 NeoBundle 'vim-airline/vim-airline'
 
-NeoBundle 'mileszs/ack.vim'
+" syntax related
+NeoBundle 'shougo/deoplete.nvim'
+NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'editorconfig/editorconfig-vim'
+
+" ui related
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'easymotion/vim-easymotion'
+
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'konfekt/fastfold'
+NeoBundle 'zhimsel/vim-stay'
+
+" Rails dev
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundle 'majutsushi/tagbar'
+
+" NeoBundle 'mileszs/ack.vim'
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
-NeoBundle 'epmatsw/ag.vim'
+" NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'Valloric/YouCompleteMe', { 'do': './install.py' }
