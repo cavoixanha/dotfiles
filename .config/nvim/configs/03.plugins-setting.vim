@@ -51,16 +51,55 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-" Searching
-" if executable('ag')
+" " -------------- Fix auto insert _Plug_ of vim-multiple-cursors and deoplete ----------
+" " Called once right before you start selecting multiple cursors
+" function! Multiple_cursors_before()
+"   if exists(':NeoCompleteLock')==2
+"     exe 'NeoCompleteLock'
+"   endif
+" endfunction
 " 
-"   " use ag over grep
-"   set grepprg=ag\ --nogroup\ --nocolor
+" " Called once only when the multiple selection is canceled (default <Esc>)
+" function! Multiple_cursors_after()
+"   if exists(':NeoCompleteUnlock')==2
+"     exe 'NeoCompleteUnlock'
+"   endif
+" endfunction
+" " ----------------------------------------------------------------------------------------
+
+" Autocommands
+" if has("autocmd")
 " 
-"   " define Ag command
-"   command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+"   " disable comment continuation
+"   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " 
-"   " bind \ to grep shortcut
-"   nnoremap \ :Ag<SPACE>
+"   " set neomake's eslint path to the local eslint, and enable it as a maker
+"   " autocmd BufEnter *.js,*.jsx let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+"   autocmd! BufEnter,BufWritePost * Neomake
+" 
+"   " better syntax highlighting
+"   autocmd BufNewFile,BufRead *eslintrc,*babelrc setlocal syntax=json
+" 
+"   " Treat .md files as Markdown
+"   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " 
 " endif
+
+" Searching
+if executable('ag')
+
+  " use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " define Ag command
+  command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+  " bind \ to grep shortcut
+  nnoremap \ :Ag<SPACE>
+
+endif
+
+" Save Vim
+let g:startify_session_autoload = 1
+let g:startify_session_persistence = 1
+let g:startify_session_dir = '~/.vim/session'

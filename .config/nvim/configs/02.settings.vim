@@ -1,3 +1,6 @@
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3.7'
+
 " Required:
 filetype plugin indent on
 " Solarized stuff
@@ -7,8 +10,47 @@ set background=dark
 colorscheme solarized
 
 set ruler
-" set number
+set number
 set cursorline
+
+" background processes
+set autoread                          " update file when changed outside of vim
+set autoindent                        " copy indentation from the previous line for new line
+set clipboard=unnamed                 " use native clipboard
+"set clipboard+=unnamedplus
+set history=200                       " store last 200 commands as history
+set lazyredraw                        " no unneeded redraws
+set nobackup                          " don't save backups
+set noerrorbells                      " no error bells please
+set noswapfile                        " no swapfiles
+set nowritebackup                     " don't save a backup while editing
+set ttyfast                           " indicates a fast terminal connection
+set undodir=~/.config/nvim/undodir    " set undofile location
+set undofile                          " maintain undo history between sessions
+set undolevels=1000                   " store 1000 undos
+
+" folding
+set foldmethod=indent                 " fold based on markers
+set nofoldenable                      " disable folds until `zc` or `zM` etc is used
+set foldcolumn=3
+hi FoldColumn ctermfg=216
+hi FoldColumn ctermbg=black
+hi Folded ctermfg=216
+hi Folded ctermbg=black
+au FileType ruby setlocal foldmethod=indent foldnestmax=4 foldlevelstart=1
+
+" " interaction
+" set backspace=2                       " make backspace work like most other apps
+" set mouse=a                           " enable mouse support
+" set mousehide                         " hide the mouse cursor while typing
+" set whichwrap=b,s,h,l,<,>,[,]         " backspace and cursor keys wrap too
+" 
+" " searching
+" set hlsearch                          " highlight search matches
+" hi Search guibg=LightBlue
+" set ignorecase                        " set case insensitive searching
+" set incsearch                         " find as you type search
+" set smartcase                         " case sensitive searching when not all lowercase
 
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:airline_powerline_fonts = 1
@@ -148,3 +190,7 @@ map <C-j> <C-y>,
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+
+" vim
+noremap <A-Left>  :-tabmove<cr>
+noremap <A-Right> :+tabmove<cr>

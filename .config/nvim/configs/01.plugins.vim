@@ -46,6 +46,11 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'konfekt/fastfold'
 NeoBundle 'zhimsel/vim-stay'
 
+NeoBundle 'mhinz/vim-startify'
+
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
+NeoBundle 'roxma/vim-tmux-clipboard'
+
 " Rails dev
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-rails'
