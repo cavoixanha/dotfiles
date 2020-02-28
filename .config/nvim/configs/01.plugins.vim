@@ -40,6 +40,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'mkitt/tabline.vim'
 
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Yggdroot/indentLine'

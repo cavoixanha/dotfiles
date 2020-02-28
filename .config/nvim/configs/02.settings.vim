@@ -8,10 +8,18 @@ let g:solarized_termtrans = 1
 let g:solarized_teamcolors = 256
 set background=dark
 colorscheme solarized
+let g:tablineclosebutton=1
+" tabline - colorscheme
+hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
+hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
+hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
 set ruler
 set number
 set cursorline
+set guioptions-=e
+set guitablabel=\[%N\]\ %t\ %M
+" set guitablabel=%t
 
 " background processes
 set autoread                          " update file when changed outside of vim
@@ -33,6 +41,7 @@ set undolevels=1000                   " store 1000 undos
 set foldmethod=indent                 " fold based on markers
 set nofoldenable                      " disable folds until `zc` or `zM` etc is used
 set foldcolumn=3
+" folding - colorscheme
 hi FoldColumn ctermfg=216
 hi FoldColumn ctermbg=black
 hi Folded ctermfg=216
@@ -64,12 +73,12 @@ set fillchars+=stl:\ ,stlnc:\
 " set term=xterm-256color
 set termencoding=utf-8
 
-let mapleader = ","
+"let mapleader = ","
 " let g:ackprg = 'ag --vimgrep'
 "if executable('ag')
 "  let g:ackprg = 'ag --vimgrep'
 "endif
-let g:mapleader = ","
+"let g:mapleader = ","
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:angular_source_directory = 'www-dev/js'
@@ -150,13 +159,23 @@ map <C-h> <C-W>h
 " targbar
 nmap <F8> :TagbarToggle<CR>
 
+" 
+nnoremap <F5> :SLoad<CR>
+nnoremap <F6> :SClose<CR>
+nnoremap <F7> :SSave<CR>
+
+nnoremap <leader>. :CtrlPTag<CR>
 " ----------------------- Config for LEADER KEY -------------------------------
 
 " set leader to space
 " let mapleader = ","
-" let mapleader = "\<SPACE>"
+let mapleader = "\<SPACE>"
 
 map <C-o> :Files<CR>
+map <C-S-t> :Files<CR> scss
+map <C-S-u> :Files<CR> js
+map <C-S-y> :Files<CR> partials
+
 map <leader>q <C-w>q
 map <leader>t <C-w>v
 map <leader>w :w<CR>
@@ -166,6 +185,7 @@ map <leader>f :CtrlPMRU<CR>
 map <leader>hh ^
 map <leader>ll $
 nnoremap <leader>ff :Ack<SPACE>
+nnoremap <leader>fc :nohlsearch<CR>
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
@@ -174,6 +194,15 @@ nnoremap <Leader><Leader> <C-^>
 map <Leader>1 1gt
 map <Leader>2 2gt
 map <Leader>3 3gt
+
+" vim
+noremap <A-Left>  :-tabmove<cr>
+noremap <A-Right> :+tabmove<cr>
+
+" Tabs
+map <Leader>b :tabs<CR>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 " For rails
 map <Leader>c :Econtroller<SPACE>
@@ -191,6 +220,5 @@ map <C-j> <C-y>,
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
-" vim
-noremap <A-Left>  :-tabmove<cr>
-noremap <A-Right> :+tabmove<cr>
+xnoremap iz :<c-u>FastFoldUpdate<cr><esc>:<c-u>normal! ]zv[z<cr>
+xnoremap az :<c-u>FastFoldUpdate<cr><esc>:<c-u>normal! ]zV[z<cr>
