@@ -58,7 +58,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'majutsushi/tagbar'
 
-" NeoBundle 'mileszs/ack.vim'
+NeoBundle 'mileszs/ack.vim'
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
 " NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

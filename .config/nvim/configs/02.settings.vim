@@ -7,12 +7,27 @@ filetype plugin indent on
 let g:solarized_termtrans = 1
 let g:solarized_teamcolors = 256
 set background=dark
+" tabline - colorscheme
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
+                      \ | hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
+                      \ | hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
+                      " \ | highlight Visual cterm=NONE ctermbg=76 ctermfg=16 gui=NONE guibg=#5fd700 guifg=#000000
+                      " \ | highlight StatusLine cterm=NONE ctermbg=231 ctermfg=160 gui=NONE guibg=#ffffff guifg=#d70000
+                      " \ | highlight Normal cterm=NONE ctermbg=17 gui=NONE guibg=#00005f
+                      " \ | highlight NonText cterm=NONE ctermbg=17 gui=NONE guibg=#00005f
+augroup END
+" hi clear TabLine
+" hi clear TabLineFill
+" hi clear TabLineSel
 colorscheme solarized
 let g:tablineclosebutton=1
+" hi clear
 " tabline - colorscheme
-hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
-hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
-hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
+" hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
+" hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
+" hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
 set ruler
 set number
@@ -78,7 +93,6 @@ set termencoding=utf-8
 "if executable('ag')
 "  let g:ackprg = 'ag --vimgrep'
 "endif
-"let g:mapleader = ","
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:angular_source_directory = 'www-dev/js'
@@ -159,10 +173,19 @@ map <C-h> <C-W>h
 " targbar
 nmap <F8> :TagbarToggle<CR>
 
-" 
+" Vim tab
 nnoremap <F5> :SLoad<CR>
 nnoremap <F6> :SClose<CR>
 nnoremap <F7> :SSave<CR>
+
+" Insert debug line in js file
+" map <F9> <ESC>oconsole.log();<ESC>
+
+" Mappings to toggle folds
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
 
 nnoremap <leader>. :CtrlPTag<CR>
 " ----------------------- Config for LEADER KEY -------------------------------
@@ -172,9 +195,9 @@ nnoremap <leader>. :CtrlPTag<CR>
 let mapleader = "\<SPACE>"
 
 map <C-o> :Files<CR>
-map <C-S-t> :Files<CR> scss
-map <C-S-u> :Files<CR> js
-map <C-S-y> :Files<CR> partials
+map <leader>sc :Files<CR> scss<Home>
+map <leader>js :Files<CR> js<Home>
+map <leader>pa :Files<CR> partials<Home>
 
 map <leader>q <C-w>q
 map <leader>t <C-w>v
@@ -201,8 +224,8 @@ noremap <A-Right> :+tabmove<cr>
 
 " Tabs
 map <Leader>b :tabs<CR>
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <F3> :tabprevious<CR>
+nnoremap <F4> :tabnext<CR>
 
 " For rails
 map <Leader>c :Econtroller<SPACE>
@@ -222,3 +245,4 @@ let g:deoplete#enable_at_startup = 1
 
 xnoremap iz :<c-u>FastFoldUpdate<cr><esc>:<c-u>normal! ]zv[z<cr>
 xnoremap az :<c-u>FastFoldUpdate<cr><esc>:<c-u>normal! ]zV[z<cr>
+
