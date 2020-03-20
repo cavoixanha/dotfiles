@@ -234,6 +234,8 @@ map <Leader>d <ESC>odebugger<ESC>
 map <Leader>g :e Gemfile<CR>
 map <Leader>m :Emodel<SPACE>
 map <Leader>r :e config/routes.rb<CR>
+map <Leader>rv :e config/routes/v2.rb<CR>
+map <Leader>rw :e config/routes/web.rb<CR>
 
 " For git
 map <Leader>gs :Gstatus<CR>
