@@ -121,6 +121,27 @@ let g:r_syntax_folding = 1
 let g:rust_fold = 1
 let g:php_folding = 1
 
+nore ; :
+nore \ ;
+
+" move in insert mode
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
+inoremap <A-a> <C-o>A
+inoremap <A-i> <C-o>I
+
+" prevent entering ex mode accidentally
+nnoremap Q <Nop><Paste>
+
+" keep selection after indent
+vnoremap < <gv
+vnoremap > >gv
+
+" Insert debug line in js file
+map <F12> <ESC>oconsole.log();<ESC>
+
 " set tabstop=2 " space mỗi lần tab
 " set softtabstop=0
 " set shiftwidth=2
@@ -141,35 +162,6 @@ map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <C-h> <C-W>h
 
-" #----- Keys settings -----#
-" # set Ctrl-a as the default prefix key combination
-" # and unbind C-b to free it up
-" set -g prefix C-a
-" unbind C-b
-" # use send-prefix to pass C-a through to application
-" bind C-a send-prefix
-" 
-" bind C-l send-keys 'C-l'
-" 
-" # reload ~/.tmux.conf using PREFIX r
-" bind r source-file ~/.tmux.conf \; display "Reloaded!"
-" 
-" # map Vi movement keys as pane movement keys
-" bind h select-pane -L
-" bind j select-pane -D
-" bind k select-pane -U
-" bind l select-pane -R
-" 
-" # use PREFIX | to split window horizontally and PREFIX - to split vertically
-" bind \ split-window -h
-" bind / split-window -v
-" 
-" # resize panes using PREFIX H, J, K, L
-" bind H resize-pane -L 5
-" bind J resize-pane -D 5
-" bind K resize-pane -U 5
-" bind L resize-pane -R 5
-
 " targbar
 nmap <F8> :TagbarToggle<CR>
 
@@ -186,6 +178,10 @@ inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
 vnoremap <F9> zf
+
+nnoremap gf <C-W>F
+vnoremap gf <C-W>F
+map gv :vertical wincmd f<CR>
 
 nnoremap <leader>. :CtrlPTag<CR>
 " ----------------------- Config for LEADER KEY -------------------------------

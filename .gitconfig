@@ -1,0 +1,15 @@
+[push]
+  default = current
+[color]
+  ui = true
+  status = auto
+[user]
+  email = vannam1993cse@gmail.com
+  name = nam.nguyen
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+[rebase]
+  autosquash = true
+[alias]
+  tree = log --oneline --decorate --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

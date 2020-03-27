@@ -51,6 +51,26 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+" neomake
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_jsx_enabled_makers = ['eslint']
+" let g:neomake_error_sign = {'text': 'xx'}
+" let g:neomake_warning_sign = {'text': '!!'}
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<C-tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsSnippetsDir="~/.snippets/"
+inoremap <C-Space> <c-r>=UltiSnips#ExpandSnippet()<cr>
+
+" vim-javascript
+let g:javascript_plugin_flow = 1
+augroup javascript_folding
+  au!
+  au FileType javascript setlocal foldmethod=syntax
+augroup END
+
 " " -------------- Fix auto insert _Plug_ of vim-multiple-cursors and deoplete ----------
 " " Called once right before you start selecting multiple cursors
 " function! Multiple_cursors_before()
