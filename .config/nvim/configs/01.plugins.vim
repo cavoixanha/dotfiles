@@ -16,6 +16,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Add or remove your Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+" Git
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -25,13 +26,14 @@ NeoBundle 'scrooloose/nerdtree'
 " NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'preservim/nerdcommenter'
 NeoBundle 'airblade/vim-gitgutter'
-" NeoBundle 'tpope/vim-rails'
 NeoBundle 'burnettk/vim-angular'
 NeoBundle 'moll/vim-node'
 NeoBundle 'vim-airline/vim-airline'
 
 " syntax related
 NeoBundle 'shougo/deoplete.nvim'
+NeoBundle 'fishbullet/deoplete-ruby'
+NeoBundle 'etordera/deoplete-rails'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'editorconfig/editorconfig-vim'
@@ -58,12 +60,15 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'majutsushi/tagbar'
 
+" Helpers
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
 " NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'Valloric/YouCompleteMe', { 'do': './install.py' }
+NeoBundle 'sirver/UltiSnips'
+NeoBundle 'honza/vim-snippets'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }

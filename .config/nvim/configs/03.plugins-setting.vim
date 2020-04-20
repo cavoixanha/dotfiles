@@ -1,17 +1,26 @@
 " deoplete
-set completeopt=longest,menuone
-let g:deoplete#auto_completion_start_length = 1
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#max_list = 5
-let g:deoplete#omni#functions = {}
-let g:deoplete#sources = {}
-let g:deoplete#enable_smart_case = 1
-let g:AutoPairsMapCR=0
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#skip_chars = ['(', ')', '<', '>']
-" Movement within 'ins-completion-menu'
-imap <expr><C-j>   pumvisible() ? "\<Down>" : "\<C-j>"
-imap <expr><C-k> pumvisible() ? "\<Up>" : "\<C-k>"
+"set completeopt=longest,menuone
+"set completeopt=longest,menu,menuone
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+" let g:deoplete#auto_completion_start_length = 1
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#max_list = 5
+" let g:deoplete#omni#functions = {}
+" let g:deoplete#sources = {}
+" let g:deoplete#enable_smart_case = 1
+" let g:AutoPairsMapCR=0
+" let g:deoplete#enable_camel_case = 1
+" let g:deoplete#skip_chars = ['(', ')', '<', '>']
+" " Movement within 'ins-completion-menu'
+" imap <expr><C-j>   pumvisible() ? "\<Down>" : "\<C-j>"
+" imap <expr><C-k> pumvisible() ? "\<Up>" : "\<C-k>"
 
 "NERDTree
 map <C-b> :NERDTreeToggle<CR>
@@ -115,8 +124,8 @@ if executable('ag')
   command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
   " bind \ to grep shortcut
-  nnoremap \ :Ag<SPACE>
-
+  "nnoremap \ :Ag<SPACE>
+  nnoremap \ :Ack!<SPACE>
 endif
 
 " Save Vim
@@ -143,3 +152,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+" xclip
+set clipboard+=unnamedplus

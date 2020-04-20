@@ -1,5 +1,7 @@
-let g:python_host_prog = '/usr/bin/python'
+"let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3.7'
+let g:ruby_host_prog = '/home/nam/.gem/ruby/2.3.0/bin/neovim-ruby-host'
+"let g:fugitive_dynamic_colors
 
 " Required:
 filetype plugin indent on
@@ -23,11 +25,6 @@ augroup END
 " hi clear TabLineSel
 colorscheme solarized
 let g:tablineclosebutton=1
-" hi clear
-" tabline - colorscheme
-" hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
-" hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
-" hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
 set ruler
 set number
@@ -239,8 +236,11 @@ map <Leader>gs :Gstatus<CR>
 map <C-j> <C-y>,
 
 " Use deoplete.
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
 xnoremap iz :<c-u>FastFoldUpdate<cr><esc>:<c-u>normal! ]zv[z<cr>
 xnoremap az :<c-u>FastFoldUpdate<cr><esc>:<c-u>normal! ]zV[z<cr>
 
+" xclip
+"map <Leader>y "*y
+"map <Leader>p "*p

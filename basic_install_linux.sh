@@ -30,7 +30,7 @@ sudo apt-get install ctags
 
 echo "Install for deoplete, require install python3.7, after require install python3-minimal because gnome base on python3-minimal"
 sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install python3.7
 ls -l /usr/bin/python*
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
@@ -39,5 +39,8 @@ sudo update-alternatives --config python3
 pip3 install --user pynvim
 echo "Don't install gnome terminal don't open"
 sudo apt-get --reinstall install python3-minimal
+
+# install xclip
+sudo apt-get install -y xclip
 
 echo "Everything done!!!"
