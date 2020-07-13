@@ -1,7 +1,12 @@
 "let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3.7'
-let g:ruby_host_prog = '/home/nam/.gem/ruby/2.3.0/bin/neovim-ruby-host'
+"let g:node_host_prog = '/home/nam/.nvm/versions/node/v8.12.0/lib/node_modules/neovim/bin/cli'
+let g:node_host_prog = '/home/nam/.nvm/versions/node/v12.18.0/lib/node_modules/neovim/bin/cli'
+let g:ruby_host_prog = '/home/nam/.gem/ruby/2.2.2/bin/neovim-ruby-host'
 "let g:fugitive_dynamic_colors
+"let g:coc_node_path = "/home/nam/.nvm/versions/node/v8.12.0/bin/node"
+let g:coc_node_path = "/home/nam/.nvm/versions/node/v12.18.0/bin/node"
+let g:coc_ruby_path = "/home/nam/.rvm/gems/ruby-2.2.2/wrappers/"
 
 " Required:
 filetype plugin indent on
@@ -59,6 +64,11 @@ hi FoldColumn ctermbg=black
 hi Folded ctermfg=216
 hi Folded ctermbg=black
 au FileType ruby setlocal foldmethod=indent foldnestmax=4 foldlevelstart=1
+let g:fastfold_savehook = 0
+let g:fastfold_fdmhook = 0
+let g:fastfold_fold_command_suffixes = []
+let g:fastfold_fold_movement_commands = []
+nmap zuz <Plug>(FastFoldUpdate)
 
 " " interaction
 " set backspace=2                       " make backspace work like most other apps
@@ -138,6 +148,7 @@ vnoremap > >gv
 
 " Insert debug line in js file
 map <F12> <ESC>oconsole.log();<ESC>
+map <F10> <ESC>obinding.pry<ESC>
 
 " set tabstop=2 " space mỗi lần tab
 " set softtabstop=0
@@ -191,6 +202,9 @@ map <C-o> :Files<CR>
 map <leader>sc :Files<CR> scss<Home>
 map <leader>js :Files<CR> js<Home>
 map <leader>pa :Files<CR> partials<Home>
+map <leader>rh :Files<CR> app/helpers<Home>
+map <leader>rl :Files<CR> lib<Home>
+map <leader>rj :Files<CR> jbuilder<Home>
 
 map <leader>q <C-w>q
 map <leader>t <C-w>v
@@ -202,6 +216,8 @@ map <leader>hh ^
 map <leader>ll $
 nnoremap <leader>ff :Ack<SPACE>
 nnoremap <leader>fc :nohlsearch<CR>
+
+vnoremap <leader>p "_dP
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
