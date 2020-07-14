@@ -1,1 +1,51 @@
-Plug 'scrooloose/nerdcommenter', { 'on':  'NERDTreeToggle' }                                             Plug 'scrooloose/nerdtree'
+" syntax related
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Syntax highlighting for js: angular, vue, react
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'tpope/vim-fugitive'
+Plug 'terryma/vim-multiple-cursors'
+
+" ui related
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+"Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'chriskempson/base16-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'Yggdroot/indentLine'
+" Plug 'mxw/vim-jsx'
+
+" background utils
+"Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'neomake/neomake'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
+" El popo
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'tpope/vim-surround'
+
+" Rails dev
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'majutsushi/tagbar'
+
+" Javascript dev
+" Plug 'ternjs/tern_for_vim'
+
+Plug 'mattn/emmet-vim'
+
+"Helpers
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'sirver/UltiSnips'
+Plug 'honza/vim-snippets'

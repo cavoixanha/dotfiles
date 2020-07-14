@@ -1,0 +1,48 @@
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias tls="tmux ls"
+alias tkill="tmux kill-session -t"
+alias tmux="tmux -u"
+alias c="clear"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+# use the correct term for ssh
+alias ssh="TERM=xterm-256color ssh"
+############## GIT #####################
+alias gls="git remote -v"
+alias gca="git commit --amend"
+alias greset="git reset --hard && git clean -f"
+alias b="bundle install -j4"
+alias gc="git commit -m"
+alias gws="git status -s"
+########################################
+
+alias m="rails db:migrate"
+alias l.="ls -d .*"
+alias ..='cd ..'
+alias 2.="cd ../.."
+alias 3.='cd ../../../'
+alias mkdir='mkdir -p'
+alias emacs="/usr/local/bin/emacs --insecure"
+alias ctags="ctags -R ."
+
+alias crashrm='sudo rm /var/crash/*'
+alias crashls='ls /var/crash/*'
+alias msf='msfconsole'
+
+alias rs="rails s"
+alias rc="rails db:create"
+alias rd="rails db:drop"
+alias rr="rails db:reset"
+
+alias cc="tmux show-buffer | xclip -selection clipboard -i"
+
+alias drmi='docker rmi $(docker images -f "dangling=true" -q) -f'
+alias drps='docker rm $(docker ps -q)'
+alias di='docker images'
+alias dp='docker ps'
+
+alias install="yaourt --m-arg "--skipchecksums --skippgpcheck" -Sb"
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ag='ag --path-to-ignore ~/.ignore'

@@ -1,0 +1,2 @@
+alias cc="tmux show-buffer | xclip -selection clipboard -i"
+alias install="yaourt --m-arg "--skipchecksums --skippgpcheck" -Sb"

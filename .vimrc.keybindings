@@ -1,0 +1,89 @@
+nore ; :
+nore \ ;
+noremap ` ^
+inore jk <Esc>
+inore kj <Esc>
+
+nnoremap <F3> :set hlsearch!<CR>
+
+" move in insert mode
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
+inoremap <A-a> <C-o>A
+inoremap <A-i> <C-o>I
+
+" prevent entering ex mode accidentally
+nnoremap Q <Nop><Paste>
+
+" keep selection after indent
+vnoremap < <gv
+vnoremap > >gv
+
+
+" Insert debug line in js file
+map <F7> <ESC>oconsole.log();<ESC>
+
+" Compile and run C++
+map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
+
+" targbar
+map <F8> :TagbarToggle<CR>
+
+" Mappings to toggle folds
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+
+nnoremap gf <C-W>F
+vnoremap gf <C-W>F
+map gv :vertical wincmd f<CR>
+
+" Tab navigation
+nnoremap <A-F1> 1gt
+nnoremap <A-F2> 2gt
+nnoremap <A-F3> 3gt
+nnoremap <A-F4> 4gt
+nnoremap <A-F5> 5gt
+nnoremap <A-F6> 6gt
+nnoremap <A-F7> 7gt
+nnoremap <A-F8> 8gt
+nnoremap <A-F9> 9gt
+nnoremap <A-F0> 10gt
+
+
+" ----------------------- Config for LEADER KEY -------------------------------
+
+" set leader to space
+" let mapleader = ","
+let mapleader = "\<SPACE>"
+
+map <C-p> :Files<CR>
+map <leader>q <C-w>q
+map <leader>t <C-w>v
+map <leader>w :w<CR>
+map <leader>pt :NERDTreeToggle<CR>
+
+" Switch between the last two files
+nnoremap <Leader><Leader> <C-^>
+
+" Shortcut to select tab
+map <Leader>1 1gt
+map <Leader>2 2gt
+map <Leader>3 3gt
+
+" For rails
+map <Leader>c :Econtroller<SPACE>
+map <Leader>db :e db/schema.rb<CR>
+map <Leader>d <ESC>odebugger<ESC>
+map <Leader>g :e Gemfile<CR>
+map <Leader>m :Emodel<SPACE>
+map <Leader>r :e config/routes.rb<CR>
+
+" For git
+map <Leader>gs :Gstatus<CR>
+
+map <C-j> <C-y>,
