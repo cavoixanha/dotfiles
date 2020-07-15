@@ -156,6 +156,9 @@ fi
 
 LS_COLORS=$LS_COLORS:'di=0;35:ln=31' ; export LS_COLORS
 
+# Load asdf
+. $HOME/.asdf/asdf.sh
+
 # load aliases
 source ~/.aliases
 
@@ -171,9 +174,6 @@ export PATH=$PATH:/usr/local/mysql/bin
 export VISUAL="vim"
 export EDITOR="vim"
 export ZSH_DISABLE_COMPFIX='true'
-
-# Load asdf
-. $HOME/.asdf/asdf.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
