@@ -1,8 +1,8 @@
 #!/bin/bash
-PATH_BACKUP="/home/nam/Desktop/Cty/dotfiles"
+PATH_BACKUP="$HOME/Desktop/dotfiles"
 echo $PATH_BACKUP
 echo "Copy nVim"
-cp -r ~/.config/nvim/configs/* /home/nam/Desktop/Cty/dotfiles/.config/nvim/configs
+cp -r ~/.config/nvim/configs/* $HOME/Desktop/dotfiles/.config/nvim/configs
 echo "=====100%====="
 echo "Copy tmux"
 cp ~/.tmux.conf $PATH_BACKUP

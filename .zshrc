@@ -14,6 +14,11 @@ fi
 export KEYTIMEOUT=20
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export EDITOR='nvim'
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+if [ -z "$TMUX" ]; then
+  tmux -u || tmux new
+fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -24,7 +29,7 @@ export EDITOR='nvim'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+#ZSH_THEME="ys"
 #"robbyrussell"
 
 # Set list of themes to load
@@ -149,11 +154,25 @@ fi
 # add-zsh-hook chpwd load-nvmrc
 # load-nvmrc
 
-alias tmux="tmux -u"
 LS_COLORS=$LS_COLORS:'di=0;35:ln=31' ; export LS_COLORS
-export EDITOR='nvim'
+
+# load aliases
+source ~/.aliases
+
+# load custom function
+source ~/.functions
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+setopt no_share_history
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH=$PATH:/usr/local/mysql/bin
+export VISUAL="vim"
+export EDITOR="vim"
+export ZSH_DISABLE_COMPFIX='true'
+
+# Load asdf
 . $HOME/.asdf/asdf.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

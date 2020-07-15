@@ -1,11 +1,11 @@
 #!/bin/bash
-PATH_BACKUP="/home/nam/Desktop/Cty/dotfiles"
-PATH_DES="/home/nam"
+PATH_BACKUP="$HOME/Desktop/dotfiles"
+PATH_DES="$HOME"
 # PATH_DES="~"
 echo $PATH_BACKUP
 echo "Copy nVim"
 # cp -r $PATH_BACKUP/.config/nvim/configs/* /home/nam/.config/nvim/configs
-cp -r $PATH_BACKUP/.config/nvim/* /home/nam/.config/nvim
+cp -r $PATH_BACKUP/.config/nvim/* $HOME/.config/nvim
 echo "=====100%====="
 echo "Copy tmux"
 cp $PATH_BACKUP/.tmux.conf $PATH_DES/.tmux.conf
