@@ -30,7 +30,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | b
 brew install the_silver_searcher
 
 # Install lolcat
-gem install lolcat
+gem install lolcat --user-install
 
 
 
