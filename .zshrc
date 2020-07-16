@@ -24,7 +24,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/nam/.oh-my-zsh"
+# temp disable
+# export ZSH="/home/nam/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -86,7 +87,8 @@ fi
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 # git rails rails3 ruby capistrano bundler heroku rake rvm autojump command-not-found python pip github gnu-utils history-substring-search zsh-syntax-highlighting
-source $ZSH/oh-my-zsh.sh
+# temp disable
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -157,7 +159,7 @@ fi
 LS_COLORS=$LS_COLORS:'di=0;35:ln=31' ; export LS_COLORS
 
 # Load asdf
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 
 # load aliases
 source ~/.aliases
