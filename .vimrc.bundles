@@ -6,6 +6,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 
 " ui related
@@ -14,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
+Plug 'jbgutierrez/vim-better-comments'
 "Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
@@ -33,11 +35,14 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'tpope/vim-surround'
 
+Plug 'mhinz/vim-startify'
+
 " Rails dev
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'majutsushi/tagbar'
+Plug 'rizzatti/dash.vim'
 
 " Javascript dev
 " Plug 'ternjs/tern_for_vim'
@@ -45,6 +50,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 
 "Helpers
+Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'sirver/UltiSnips'

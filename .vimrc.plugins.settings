@@ -133,15 +133,27 @@ if has("autocmd")
 endif
 
 " Searching
-if executable('ag')
+" if executable('ag')
+"
+"   " use ag over grep
+"   set grepprg=ag\ --nogroup\ --nocolor
+"
+"   " define Ag command
+"   command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+"
+"   " bind \ to grep shortcut
+"   nnoremap \ :Ag<SPACE>
+"
+" endif
+if executable('ack')
 
   " use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ack\ --nogroup\ --nocolor
 
-  " define Ag command
-  command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  " define Ack command
+  command! -nargs=+ -complete=file -bar Ack silent! grep! <args>|cwindow|redraw!
 
   " bind \ to grep shortcut
-  nnoremap \ :Ag<SPACE>
+  nnoremap \ :Ack<SPACE>
 
 endif

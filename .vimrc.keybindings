@@ -23,13 +23,24 @@ vnoremap > >gv
 
 
 " Insert debug line in js file
-map <F7> <ESC>oconsole.log();<ESC>
+" map <F7> <ESC>oconsole.log();<ESC>
+map <F12> <ESC>oconsole.log();<ESC>
+map <F10> <ESC>obinding.pry<ESC>
 
 " Compile and run C++
 map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 " targbar
 map <F8> :TagbarToggle<CR>
+
+" Vim tab
+nnoremap <F5> :SSave<CR>
+nnoremap <F6> :SLoad<CR>
+nnoremap <F7> :SClose<CR>
+nnoremap <leader>l :source ~/.config/nvim/init.vim<CR>
+
+" app
+nnoremap <C-h> :Dash<CR>
 
 " Mappings to toggle folds
 inoremap <F9> <C-O>za
@@ -62,10 +73,26 @@ nnoremap <A-F0> 10gt
 let mapleader = "\<SPACE>"
 
 map <C-p> :Files<CR>
+" map <C-o> :Files<CR>
+map <leader>sc :Files<CR> scss<Home>
+map <leader>js :Files<CR> js<Home>
+map <leader>pa :Files<CR> partials<Home>
+map <leader>rh :Files<CR> app/helpers<Home>
+map <leader>rl :Files<CR> lib<Home>
+map <leader>rj :Files<CR> jbuilder<Home>
+
 map <leader>q <C-w>q
 map <leader>t <C-w>v
 map <leader>w :w<CR>
 map <leader>pt :NERDTreeToggle<CR>
+" map <leader>mru :CtrlPMRU
+map <leader>f :CtrlPMRU<CR>
+map <leader>hh ^
+map <leader>ll $
+nnoremap <leader>ff :Ack<SPACE>
+nnoremap <leader>fc :nohlsearch<CR>
+
+vnoremap <leader>p "_dP
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
@@ -75,6 +102,15 @@ map <Leader>1 1gt
 map <Leader>2 2gt
 map <Leader>3 3gt
 
+" vim
+noremap <A-Left>  :-tabmove<cr>
+noremap <A-Right> :+tabmove<cr>
+
+" Tabs
+map <Leader>b :tabs<CR>
+nnoremap <F3> :tabprevious<CR>
+nnoremap <F4> :tabnext<CR>
+
 " For rails
 map <Leader>c :Econtroller<SPACE>
 map <Leader>db :e db/schema.rb<CR>
@@ -82,6 +118,8 @@ map <Leader>d <ESC>odebugger<ESC>
 map <Leader>g :e Gemfile<CR>
 map <Leader>m :Emodel<SPACE>
 map <Leader>r :e config/routes.rb<CR>
+map <Leader>rv :e config/routes/v2.rb<CR>
+map <Leader>rw :e config/routes/web.rb<CR>
 
 " For git
 map <Leader>gs :Gstatus<CR>

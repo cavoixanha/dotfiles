@@ -10,3 +10,6 @@ echo "=====100%====="
 echo "Copy zsh"
 cp ~/.zshrc $PATH_BACKUP
 echo "=====100%====="
+echo "Copy nVim for macOS"
+cp ~/.vimrc.* $PATH_BACKUP
+echo "=====100%====="
