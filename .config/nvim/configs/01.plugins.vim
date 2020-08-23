@@ -62,13 +62,16 @@ NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'rlue/vim-fold-rspec'
 
+" Nodejs
+NeoBundle 'eliba2/vim-node-inspect'
+
 " Helpers
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout release' } }
 " NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 NeoBundle 'junegunn/fzf.vim'
-"NeoBundle 'Valloric/YouCompleteMe', { 'do': './install.py' }
+NeoBundle 'Valloric/YouCompleteMe', { 'do': './install.py' }
 NeoBundle 'sirver/UltiSnips'
 NeoBundle 'honza/vim-snippets'
 
