@@ -2,10 +2,10 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.3
 
-Documentation:
+Style/Documentation:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 Style/FrozenStringLiteralComment:

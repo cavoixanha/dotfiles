@@ -3,6 +3,7 @@ nore \ ;
 noremap ` ^
 inore jk <Esc>
 inore kj <Esc>
+nnoremap <C-T> :tab split<CR>
 
 nnoremap <F3> :set hlsearch!<CR>
 
@@ -24,8 +25,15 @@ vnoremap > >gv
 
 " Insert debug line in js file
 " map <F7> <ESC>oconsole.log();<ESC>
-map <F12> <ESC>oconsole.log();<ESC>
+map <leader>jd <ESC>oconsole.log();<ESC>
 map <F10> <ESC>obinding.pry<ESC>
+" nnoremap <silent><F4> :NodeInspectStart<cr>
+nnoremap <silent><S-F5> :NodeInspectRun<cr>
+" nnoremap <silent><F6> :NodeInspectConnect("127.0.0.1:9229")<cr>
+nnoremap <silent><S-F7> :NodeInspectStepInto<cr>
+nnoremap <silent><S-F8> :NodeInspectStepOver<cr>
+nnoremap <silent><S-F9> :NodeInspectToggleBreakpoint<cr>
+" nnoremap <silent><F10> :NodeInspectStop<cr>
 
 " Compile and run C++
 map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
@@ -34,10 +42,10 @@ map <F6> :w <CR> :!gcc % -o %< && ./%< <CR>
 map <F8> :TagbarToggle<CR>
 
 " Vim tab
-nnoremap <F5> :SSave<CR>
-nnoremap <F6> :SLoad<CR>
-nnoremap <F7> :SClose<CR>
-nnoremap <leader>l :source ~/.config/nvim/init.vim<CR>
+nnoremap <F5> :SLoad<CR>
+nnoremap <F6> :SClose<CR>
+nnoremap <F7> :SSave<CR>
+nnoremap <leader>ln :source ~/.config/nvim/init.vim<CR>
 
 " app
 nnoremap <C-h> :Dash<CR>
@@ -91,6 +99,8 @@ map <leader>hh ^
 map <leader>ll $
 nnoremap <leader>ff :Ack<SPACE>
 nnoremap <leader>fc :nohlsearch<CR>
+map <leader>dv :vsp<CR>
+map <leader>dh :split<CR>
 
 vnoremap <leader>p "_dP
 
@@ -122,6 +132,10 @@ map <Leader>rv :e config/routes/v2.rb<CR>
 map <Leader>rw :e config/routes/web.rb<CR>
 
 " For git
-map <Leader>gs :Gstatus<CR>
+map <Leader>dm :Gstatus<CR>
+
+" For tag
+nnoremap <leader>a :ta<SPACE>
+
 
 map <C-j> <C-y>,
