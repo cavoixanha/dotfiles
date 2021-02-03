@@ -157,7 +157,6 @@ set tabstop=2 shiftwidth=2 expandtab
 
 " text appearance
 set list                              " show invisible characters
-" set listchars=tab:>·,trail:·,nbsp:¬   " but only show useful chaaracters
 set listchars=tab:>·,trail:·,nbsp:¬   " but only show useful chaaracters
 set nowrap                            " disable line wrapping
 
