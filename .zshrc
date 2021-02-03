@@ -179,3 +179,5 @@ export ZSH_DISABLE_COMPFIX='true'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(rbenv init -)"
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/

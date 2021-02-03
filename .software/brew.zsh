@@ -19,6 +19,7 @@ brew install vim
 brew install zsh
 brew install zsh-completions
 brew install nodejs
+brew install ctags
 
 
 brew cask install google-chrome
