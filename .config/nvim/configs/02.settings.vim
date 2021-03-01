@@ -1,12 +1,7 @@
 "let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3.7'
-"let g:node_host_prog = '/home/nam/.nvm/versions/node/v8.12.0/lib/node_modules/neovim/bin/cli'
-let g:node_host_prog = '/home/nam/.nvm/versions/node/v12.18.0/lib/node_modules/neovim/bin/cli'
-let g:ruby_host_prog = '/home/nam/.gem/ruby/2.2.2/bin/neovim-ruby-host'
+let g:ruby_host_prog = '/home/nam/.gem/ruby/2.3.0/bin/neovim-ruby-host'
 "let g:fugitive_dynamic_colors
-"let g:coc_node_path = "/home/nam/.nvm/versions/node/v8.12.0/bin/node"
-let g:coc_node_path = "/home/nam/.nvm/versions/node/v12.18.0/bin/node"
-let g:coc_ruby_path = "/home/nam/.rvm/gems/ruby-2.2.2/wrappers/"
 
 " Required:
 filetype plugin indent on
@@ -70,18 +65,18 @@ let g:fastfold_fold_command_suffixes = []
 let g:fastfold_fold_movement_commands = []
 nmap zuz <Plug>(FastFoldUpdate)
 
-" " interaction
-" set backspace=2                       " make backspace work like most other apps
-" set mouse=a                           " enable mouse support
-" set mousehide                         " hide the mouse cursor while typing
-" set whichwrap=b,s,h,l,<,>,[,]         " backspace and cursor keys wrap too
-" 
-" " searching
-" set hlsearch                          " highlight search matches
-" hi Search guibg=LightBlue
-" set ignorecase                        " set case insensitive searching
-" set incsearch                         " find as you type search
-" set smartcase                         " case sensitive searching when not all lowercase
+" interaction
+set backspace=2                       " make backspace work like most other apps
+set mouse=a                           " enable mouse support
+set mousehide                         " hide the mouse cursor while typing
+set whichwrap=b,s,h,l,<,>,[,]         " backspace and cursor keys wrap too
+
+" searching
+set hlsearch                          " highlight search matches
+hi Search guibg=LightBlue
+set ignorecase                        " set case insensitive searching
+set incsearch                         " find as you type search
+set smartcase                         " case sensitive searching when not all lowercase
 
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:airline_powerline_fonts = 1
@@ -130,6 +125,8 @@ let g:php_folding = 1
 
 nore ; :
 nore \ ;
+
+map <leader>tt :tab split<CR>
 
 " move in insert mode
 inoremap <A-h> <C-o>h

@@ -4,8 +4,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Syntax highlighting for js: angular, vue, react
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-
+" Git
 Plug 'tpope/vim-fugitive'
+
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -35,6 +36,7 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'tpope/vim-surround'
 
+" Save Panel
 Plug 'mhinz/vim-startify'
 
 " Rails dev

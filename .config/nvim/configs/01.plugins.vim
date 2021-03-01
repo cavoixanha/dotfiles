@@ -16,19 +16,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Add or remove your Bundles here:
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-" Git
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-
-" NeoBundle 'scrooloose/nerdcommenter', { 'on':  'NERDTreeToggle' } 
-NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'preservim/nerdcommenter'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'burnettk/vim-angular'
-NeoBundle 'moll/vim-node'
-NeoBundle 'vim-airline/vim-airline'
 
 " syntax related
 NeoBundle 'shougo/deoplete.nvim'
@@ -37,6 +24,23 @@ NeoBundle 'etordera/deoplete-rails'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'editorconfig/editorconfig-vim'
+
+" Git
+NeoBundle 'tpope/vim-fugitive'
+
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'flazz/vim-colorschemes'
+
+" NeoBundle 'scrooloose/nerdcommenter', { 'on':  'NERDTreeToggle' }
+NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'preservim/nerdcommenter'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'burnettk/vim-angular'
+NeoBundle 'moll/vim-node'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'pangloss/vim-javascript'
 
 " ui related
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
@@ -50,8 +54,12 @@ NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'konfekt/fastfold'
 NeoBundle 'zhimsel/vim-stay'
 
+" Save Panel
 NeoBundle 'mhinz/vim-startify'
 
+" background utils
+"NeoBundle 'ConradIrwin/vim-bracketed-paste'
+NeoBundle 'neomake/neomake'
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'roxma/vim-tmux-clipboard'
 
@@ -61,6 +69,11 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'rlue/vim-fold-rspec'
+NeoBundle 'rizzatti/dash.vim'
+
+" Javascript dev
+" Plug 'ternjs/tern_for_vim'
+NeoBundle 'mattn/emmet-vim'
 
 " Nodejs
 NeoBundle 'eliba2/vim-node-inspect'
@@ -71,7 +84,7 @@ NeoBundle 'neoclide/coc.nvim', 'release', { 'build': { 'others': 'git checkout r
 " NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 NeoBundle 'junegunn/fzf.vim'
-"NeoBundle 'Valloric/YouCompleteMe', { 'do': './install.py' }
+NeoBundle 'Valloric/YouCompleteMe', { 'do': './install.py' }
 NeoBundle 'sirver/UltiSnips'
 NeoBundle 'honza/vim-snippets'
 
