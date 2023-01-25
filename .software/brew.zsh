@@ -22,7 +22,7 @@ brew install nodejs
 brew install ctags
 
 
-brew cask install google-chrome
+# brew cask install google-chrome
 
 # Remove outdated versions from the cellar.
 brew cleanup
